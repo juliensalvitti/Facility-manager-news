@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Anatomie d'un projet d'aménagement réussi | Bedimo</title>
+<meta name="description" content="Entre la première visite et la remise des clés, un projet d'aménagement passe par une série d'étapes où tout peut se jouer. Voici comment se déroule, concrètement, un chantier bien mené.">
+<style>
+:root{
+  --blue:#0057A4; --blue2:#0668B2; --navy:#0E1A2B;
+  --bg:#F4F3EF; --bg2:#E5E5E3; --white:#F2F1EE;
+  --text:#3A3938; --muted:#757572; --line:#DEDDD7;
+  --maxw:740px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);
+  font-family:"Segoe UI",-apple-system,BlinkMacSystemFont,Roboto,Helvetica,Arial,sans-serif;
+  font-size:18px;line-height:1.72;-webkit-font-smoothing:antialiased;}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+a{color:var(--blue);text-decoration:none}
+header.site{background:var(--white);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20}
+header.site .bar{max-width:1100px;margin:0 auto;padding:16px 24px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{color:var(--blue);display:flex;align-items:center}
+.logo svg{width:118px;height:auto;display:block}
+header.site nav{display:flex;align-items:center;gap:26px}
+header.site nav a{color:var(--text);font-size:14px;font-weight:500;letter-spacing:.01em}
+header.site nav a:hover{color:var(--blue)}
+.nav-cta{background:var(--blue);color:var(--white)!important;padding:9px 16px;border-radius:8px;font-size:13px;font-weight:600}
+@media(max-width:760px){header.site nav .lnk{display:none}}
+.hero{padding:60px 0 26px}
+.kicker{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);
+  background:rgba(0,87,164,.08);padding:6px 12px;border-radius:999px;margin:0 0 22px}
+h1{font-size:42px;line-height:1.14;font-weight:700;color:var(--navy);margin:0 0 20px;letter-spacing:-.01em}
+.lead{font-size:21px;color:#4a4947;margin:0 0 24px}
+.meta{font-size:13px;color:var(--muted);border-top:1px solid var(--line);padding-top:16px;letter-spacing:.02em}
+@media(max-width:760px){h1{font-size:31px}.lead{font-size:18px}}
+article{padding:14px 0 46px}
+article h2{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.13em;color:var(--blue);margin:50px 0 6px}
+article h3{font-size:27px;font-weight:700;color:var(--navy);line-height:1.26;margin:6px 0 18px;letter-spacing:-.005em}
+article p{margin:0 0 22px}
+article strong{color:var(--navy);font-weight:600}
+article img{max-width:100%;height:auto}
+.pull{border-left:4px solid var(--blue);background:rgba(0,87,164,.05);padding:18px 24px;margin:34px 0;
+  font-size:22px;line-height:1.42;color:var(--navy);font-weight:600;border-radius:0 10px 10px 0}
+ul.clean{list-style:none;padding:0;margin:22px 0}
+ul.clean li{position:relative;padding:0 0 14px 30px}
+ul.clean li::before{content:"";position:absolute;left:2px;top:11px;width:8px;height:8px;background:var(--blue);border-radius:50%}
+.cards{display:grid;gap:16px;margin:22px 0}
+.card{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:22px 24px}
+.card h4{margin:0 0 8px;font-size:18px;color:var(--blue);font-weight:700}
+.card p{margin:0;font-size:16px;color:#54534f}
+.callout{background:var(--navy);color:#D7DEE6;border-radius:16px;padding:34px 32px;margin:40px 0}
+.callout .t{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#5EA3DC;margin:0 0 12px}
+.callout h3{color:#fff;margin:0 0 14px;font-size:23px}
+.callout p{color:#C2CDD8;font-size:16px;margin:0 0 14px}
+.callout p:last-child{margin:0}
+.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden;margin:26px 0}
+.fact{background:var(--white);padding:18px 16px;display:flex;flex-direction:column;gap:4px}
+.fact .n{font-size:19px;font-weight:700;color:var(--navy);line-height:1.2}
+.fact .l{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+@media(max-width:620px){.facts{grid-template-columns:repeat(2,1fr)}}
+.formzone{background:var(--bg2);border-top:1px solid var(--line);padding:64px 0 78px}
+.formcard{max-width:680px;margin:0 auto;background:var(--white);border:1px solid var(--line);border-radius:18px;
+  padding:42px 40px;box-shadow:0 20px 50px -30px rgba(14,26,43,.4)}
+.formcard .kicker{margin-bottom:14px}
+.formcard h3{font-size:29px;font-weight:700;color:var(--navy);margin:0 0 12px;line-height:1.2}
+.formcard .intro{color:#4a4947;font-size:17px;margin:0 0 6px}
+.promise{font-size:14px;color:var(--blue);font-weight:600;margin:0 0 26px}
+.row{display:flex;gap:16px}
+.row .field{flex:1}
+.field{margin:0 0 18px;display:flex;flex-direction:column}
+label{font-size:13px;color:var(--muted);margin:0 0 6px;font-weight:500}
+label .req{color:var(--blue)}
+input,select,textarea{font-family:inherit;font-size:16px;color:var(--text);background:var(--bg);
+  border:1px solid var(--line);border-radius:10px;padding:13px 14px;outline:none;transition:border-color .15s,box-shadow .15s}
+input:focus,select:focus,textarea:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(0,87,164,.13)}
+textarea{resize:vertical;min-height:96px}
+button{width:100%;border:none;cursor:pointer;background:var(--blue);color:var(--white);font-family:inherit;
+  font-size:16px;font-weight:600;padding:16px;border-radius:10px;margin-top:6px;transition:background .15s,transform .05s}
+button:hover{background:var(--blue2)}
+button:active{transform:translateY(1px)}
+.reassure{font-size:13px;color:var(--muted);text-align:center;margin:16px 0 0}
+.alt-rdv{text-align:center;font-size:14px;margin:18px 0 0;color:var(--muted)}
+.alt-rdv a{font-weight:600}
+@media(max-width:560px){.row{flex-direction:column;gap:0}.formcard{padding:30px 22px}}
+footer.site{background:#000000;color:#B3B1A9;padding:46px 24px 40px}
+footer.site .inner{max-width:1100px;margin:0 auto;display:flex;flex-wrap:wrap;gap:28px;justify-content:space-between;align-items:flex-start}
+footer.site .logo{color:#F4F3EF}
+footer.site .logo svg{width:130px}
+footer.site .tag{font-size:14px;margin:14px 0 0;max-width:320px;line-height:1.6;color:#9C9A92}
+footer.site .contact{font-size:14px;line-height:1.9}
+footer.site .contact a{color:#E6E5E0}
+footer.site .contact a:hover{color:#fff}
+footer.site .copy{max-width:1100px;margin:30px auto 0;padding-top:20px;border-top:1px solid rgba(255,255,255,.14);font-size:12px;color:#76746D}
+.formmsg{display:none;text-align:center;padding:14px;border-radius:10px;margin-top:14px;font-size:15px}
+.formmsg.ok{display:block;background:rgba(0,87,164,.08);color:#0057A4}
+.formmsg.err{display:block;background:#FBE9E7;color:#B23A1E}
+</style>
+</head>
+<body>
+<header class="site">
+  <div class="bar">
+    <a class="logo" href="https://www.bedimo.com" aria-label="Bedimo"><svg viewBox="0 0 712 170" fill="currentColor" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bedimo"><path d="M63.6381 49.9445C47.2621 49.9445 33.5868 56.815 25.767 69.1006V0.345703H0.110483V128.382H0V167.607H24.8832V151.19L25.0305 149.87C32.6047 162.883 46.7833 170 63.6381 170C91.492 170 117.885 148.636 117.885 110.09C117.885 71.5429 91.492 49.9321 63.6381 49.9321V49.9445ZM58.7523 146.922C41.4065 146.922 25.276 133.662 25.276 110.09C25.276 86.5175 41.4065 73.2575 58.7523 73.2575C77.0801 73.2575 92.2285 86.7642 92.2285 110.09C92.2285 133.415 77.0801 146.922 58.7523 146.922Z"/><path d="M186.544 49.9443C152.331 49.9443 128.393 74.9842 128.393 110.102C128.393 145.219 152.589 170.013 186.79 170.013C211.219 170.013 232.235 156.259 239.33 132.934H214.165C209.279 142.506 200.477 147.415 186.556 147.415C169.935 147.415 157.475 137.103 154.062 119.427H242.031C242.276 115.739 242.276 113.778 242.276 110.102C242.276 75.7243 217.848 49.9443 186.569 49.9443H186.544ZM154.038 99.7774C157.463 83.3227 169.677 72.5296 186.532 72.5296C203.387 72.5296 215.368 85.0495 216.829 99.7774H154.025H154.038Z"/><path d="M344.387 68.6072C336.567 56.5806 322.88 49.9445 306.516 49.9445C278.662 49.9445 252.514 71.3085 252.514 110.102C252.514 148.895 278.662 170.013 306.516 170.013C322.941 170.013 336.813 163.253 344.522 151.103V167.62H369.405V167.57H370.289V0.345703H344.387V68.6072ZM311.647 146.922C293.074 146.922 278.171 133.415 278.171 110.09C278.171 86.7642 293.074 73.2575 311.647 73.2575C328.748 73.2575 345.124 86.5175 345.124 110.09C345.124 133.662 328.748 146.922 311.647 146.922Z"/><path d="M413.046 52.3984H387.389V167.545H413.046V52.3984Z"/><path d="M413.046 0H387.389V26.076H413.046V0Z"/><path d="M651.885 49.9443C617.427 49.9443 592.016 76.2177 592.016 110.102C592.016 143.986 617.427 170.013 651.885 170.013C686.343 170.013 712 143.986 712 110.102C712 76.2177 686.589 49.9443 651.885 49.9443ZM651.885 146.922C632.096 146.922 617.672 131.454 617.672 110.089C617.672 88.7253 632.084 73.0106 651.885 73.0106C671.686 73.0106 686.343 88.4786 686.343 110.089C686.343 131.7 671.686 146.922 651.885 146.922Z"/><path d="M576.34 93.1536C576.204 69.4335 556.968 50.1787 533.337 50.1787C521.626 50.1787 510.995 54.903 503.237 62.563C495.478 54.903 484.848 50.1787 473.136 50.1787C449.505 50.1787 430.257 69.4335 430.134 93.1536V167.583H455.938V93.4003C455.938 83.8654 463.659 76.1191 473.136 76.1191C482.613 76.1191 490.335 83.8777 490.335 93.4003V167.583H516.139V93.4003C516.139 83.8654 523.86 76.1191 533.337 76.1191C542.814 76.1191 550.536 83.8777 550.536 93.4003V167.583H576.34V93.1536Z"/></svg></a>
+    <nav>
+      <a class="lnk" href="https://www.bedimo.com/studio">Studio</a>
+      <a class="lnk" href="https://www.bedimo.com/mobilier">Mobilier</a>
+      <a class="lnk" href="https://www.bedimo.com/realisations">Réalisations</a>
+      <a class="lnk" href="https://www.bedimo.com/news">News</a>
+      <a class="nav-cta" href="https://bookings.cloud.microsoft/bookwithme/user/f615d1fc054f4f0f942b4b6bb35472ff@bedimo.com?anonymous&amp;ismsaljsauthenabled&amp;ep=plink" target="_blank" rel="noopener">Prendre rendez-vous</a>
+    </nav>
+  </div>
+</header>
+<div class="wrap">
+  <section class="hero">
+    <span class="kicker">Réalisations</span>
+    <h1>Anatomie d'un projet d'aménagement réussi</h1>
+    <p class="lead">Entre la première visite et la remise des clés, un projet d'aménagement passe par une série d'étapes où tout peut se jouer. Voici comment se déroule, concrètement, un chantier bien mené.</p>
+    <p class="meta">Par Bedimo · Lecture 7 min · Réalisations</p>
+  </section>
+</div>
+<div class="wrap">
+  <article>
+
+    <p>On juge souvent un aménagement à sa photo finale. Mais ce qui fait la réussite d'un projet ne se voit pas sur l'image : c'est la méthode. Un espace livré dans les délais, dans le budget, et qui fonctionne dès le premier jour, est presque toujours le fruit d'un processus rigoureux. Le voici, étape par étape.</p>
+
+    <h2>Étape 1</h2>
+    <h3>Comprendre avant de dessiner</h3>
+    <p>Tout commence par une visite et beaucoup de questions. Combien de personnes, pour quels usages ? Quels pics de fréquentation, quelles contraintes techniques, quelle culture d'entreprise ? Cette phase d'écoute conditionne tout le reste. Un beau plan conçu sur de mauvaises hypothèses reste un mauvais plan.</p>
+
+    <h2>Étape 2</h2>
+    <h3>Le space planning</h3>
+    <p>Vient ensuite la traduction des besoins en plan : implantation des zones, circulation, ratio entre espaces individuels et collectifs. C'est l'étape la plus stratégique. Bien menée, elle révèle souvent qu'on peut faire mieux avec la surface existante, sans pousser les murs.</p>
+
+    <h2>Étape 3</h2>
+    <h3>Le choix du mobilier et des matières</h3>
+    <p>Une fois le plan validé, place aux choix concrets : mobilier, finitions, acoustique, éclairage. L'objectif n'est pas d'empiler les options, mais de tenir l'équilibre entre esthétique, confort réel et budget. Chaque choix est arbitré en fonction de l'usage, pas du catalogue.</p>
+
+    <div class="callout">
+      <p class="t">Le point qui change tout</p>
+      <h3>Un seul interlocuteur, de la conception au montage</h3>
+      <p>La plupart des dérapages — délais, surcoûts, malfaçons — viennent des zones grises entre prestataires. Qui coordonne la livraison ? Qui gère un meuble abîmé ? Qui répond quand le planning glisse ?</p>
+      <p>Lorsque conception, fourniture, livraison et montage sont gérés en interne, ces zones grises disparaissent. Un seul responsable, une seule conversation, une responsabilité claire du début à la fin.</p>
+    </div>
+
+    <h2>Étape 4</h2>
+    <h3>La livraison et le montage</h3>
+    <p>C'est le moment de vérité. Un planning de livraison cadencé, des équipes de montage qui connaissent le projet, une coordination avec les autres corps de métier : c'est ce qui fait la différence entre un emménagement fluide et une semaine de chaos. L'idéal reste un espace prêt à l'usage le jour de l'arrivée des équipes.</p>
+
+    <h2>Étape 5</h2>
+    <h3>Le service après la remise des clés</h3>
+    <p>Un projet ne s'arrête pas à la livraison. Un ajustement, une extension, un élément à remplacer : un bon partenaire reste joignable et réactif après le chantier. C'est souvent là que se mesure la fiabilité réelle.</p>
+
+    <p class="pull">Un projet réussi, ce n'est pas un coup de chance esthétique. C'est une méthode tenue, du premier croquis au dernier meuble monté.</p>
+  
+  </article>
+</div>
+<section class="formzone" id="contact">
+  <div class="formcard">
+    <span class="kicker">Votre projet · étude gratuite</span>
+    <h3>Un projet d'aménagement en vue ?</h3>
+    <p class="intro">Parlez-nous de vos locaux et de votre échéance. On vous explique comment on procéderait, étape par étape, avec un seul interlocuteur de la conception au montage.</p>
+    <p class="promise">Premier échange sous 24h, sans engagement.</p>
+    <form id="leadform" action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="ab95562c-d74c-4ec8-b286-c6fbfdb51535">
+      <input type="hidden" name="from_name" value="Site Bedimo — Articles">
+      <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+      <div class="row">
+        <div class="field"><label for="prenom">Prénom <span class="req">*</span></label><input id="prenom" name="prenom" type="text" required></div>
+        <div class="field"><label for="nom">Nom <span class="req">*</span></label><input id="nom" name="nom" type="text" required></div>
+      </div>
+      <div class="row">
+        <div class="field"><label for="societe">Société <span class="req">*</span></label><input id="societe" name="societe" type="text" required></div>
+        <div class="field"><label for="email">Email professionnel <span class="req">*</span></label><input id="email" name="email" type="email" required></div>
+      </div>
+      <div class="row">
+        <div class="field"><label for="tel">Téléphone</label><input id="tel" name="telephone" type="tel"></div>
+        <div class="field"><label for="effectif">Nombre d'employés</label>
+          <select id="effectif" name="nombre_employes">
+            <option value="">Sélectionnez…</option><option>20 à 50</option><option>50 à 150</option><option>150 à 500</option><option>Plus de 500</option>
+          </select>
+        </div>
+      </div>
+      <div class="field"><label for="projet">Votre projet</label><textarea id="projet" name="projet" placeholder="Ex : aménagement de 600 m² de nouveaux bureaux, emménagement prévu dans 4 mois…"></textarea></div>
+      <input type="hidden" name="subject" value="Demande d'étude — projet d'aménagement">
+      <button type="submit">Lancer la discussion</button>
+      <p class="reassure">2 minutes · Réponse sous 24h · Aucun engagement.</p>
+      <p class="alt-rdv">Vous préférez en parler de vive voix ? <a href="https://bookings.cloud.microsoft/bookwithme/user/f615d1fc054f4f0f942b4b6bb35472ff@bedimo.com?anonymous&amp;ismsaljsauthenabled&amp;ep=plink" target="_blank" rel="noopener">Prendre rendez-vous directement →</a></p>
+      <div id="formmsg" class="formmsg"></div>
+    </form>
+  </div>
+</section>
+<footer class="site">
+  <div class="inner">
+    <div>
+      <a class="logo" href="https://www.bedimo.com" aria-label="Bedimo"><svg viewBox="0 0 712 170" fill="currentColor" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bedimo"><path d="M63.6381 49.9445C47.2621 49.9445 33.5868 56.815 25.767 69.1006V0.345703H0.110483V128.382H0V167.607H24.8832V151.19L25.0305 149.87C32.6047 162.883 46.7833 170 63.6381 170C91.492 170 117.885 148.636 117.885 110.09C117.885 71.5429 91.492 49.9321 63.6381 49.9321V49.9445ZM58.7523 146.922C41.4065 146.922 25.276 133.662 25.276 110.09C25.276 86.5175 41.4065 73.2575 58.7523 73.2575C77.0801 73.2575 92.2285 86.7642 92.2285 110.09C92.2285 133.415 77.0801 146.922 58.7523 146.922Z"/><path d="M186.544 49.9443C152.331 49.9443 128.393 74.9842 128.393 110.102C128.393 145.219 152.589 170.013 186.79 170.013C211.219 170.013 232.235 156.259 239.33 132.934H214.165C209.279 142.506 200.477 147.415 186.556 147.415C169.935 147.415 157.475 137.103 154.062 119.427H242.031C242.276 115.739 242.276 113.778 242.276 110.102C242.276 75.7243 217.848 49.9443 186.569 49.9443H186.544ZM154.038 99.7774C157.463 83.3227 169.677 72.5296 186.532 72.5296C203.387 72.5296 215.368 85.0495 216.829 99.7774H154.025H154.038Z"/><path d="M344.387 68.6072C336.567 56.5806 322.88 49.9445 306.516 49.9445C278.662 49.9445 252.514 71.3085 252.514 110.102C252.514 148.895 278.662 170.013 306.516 170.013C322.941 170.013 336.813 163.253 344.522 151.103V167.62H369.405V167.57H370.289V0.345703H344.387V68.6072ZM311.647 146.922C293.074 146.922 278.171 133.415 278.171 110.09C278.171 86.7642 293.074 73.2575 311.647 73.2575C328.748 73.2575 345.124 86.5175 345.124 110.09C345.124 133.662 328.748 146.922 311.647 146.922Z"/><path d="M413.046 52.3984H387.389V167.545H413.046V52.3984Z"/><path d="M413.046 0H387.389V26.076H413.046V0Z"/><path d="M651.885 49.9443C617.427 49.9443 592.016 76.2177 592.016 110.102C592.016 143.986 617.427 170.013 651.885 170.013C686.343 170.013 712 143.986 712 110.102C712 76.2177 686.589 49.9443 651.885 49.9443ZM651.885 146.922C632.096 146.922 617.672 131.454 617.672 110.089C617.672 88.7253 632.084 73.0106 651.885 73.0106C671.686 73.0106 686.343 88.4786 686.343 110.089C686.343 131.7 671.686 146.922 651.885 146.922Z"/><path d="M576.34 93.1536C576.204 69.4335 556.968 50.1787 533.337 50.1787C521.626 50.1787 510.995 54.903 503.237 62.563C495.478 54.903 484.848 50.1787 473.136 50.1787C449.505 50.1787 430.257 69.4335 430.134 93.1536V167.583H455.938V93.4003C455.938 83.8654 463.659 76.1191 473.136 76.1191C482.613 76.1191 490.335 83.8777 490.335 93.4003V167.583H516.139V93.4003C516.139 83.8654 523.86 76.1191 533.337 76.1191C542.814 76.1191 550.536 83.8777 550.536 93.4003V167.583H576.34V93.1536Z"/></svg></a>
+      <p class="tag">Aménagement d'espaces de travail depuis plus de 40 ans. Design intérieur, mobilier professionnel, livraison et montage.</p>
+    </div>
+    <div class="contact">
+      Julien Salvitti — Business Developer<br>
+      <a href="mailto:j.salvitti@bedimo.com">j.salvitti@bedimo.com</a><br>
+      <a href="tel:+32494039525">0494 03 95 25</a><br>
+      <a href="https://bookings.cloud.microsoft/bookwithme/user/f615d1fc054f4f0f942b4b6bb35472ff@bedimo.com?anonymous&amp;ismsaljsauthenabled&amp;ep=plink" target="_blank" rel="noopener">Prendre rendez-vous</a><br>
+      <a href="https://www.bedimo.com">bedimo.com</a>
+    </div>
+  </div>
+  <div class="copy">© 2026 Bedimo · Aménagement d'espaces de travail en Belgique</div>
+</footer>
+<script>
+(function(){var f=document.getElementById('leadform'),m=document.getElementById('formmsg');if(!f)return;f.addEventListener('submit',async function(e){e.preventDefault();var b=f.querySelector('button[type=submit]'),l=b.textContent;b.textContent='Envoi en cours…';b.disabled=true;try{var r=await fetch(f.action,{method:'POST',body:new FormData(f),headers:{'Accept':'application/json'}});var d=await r.json();if(d.success){f.reset();m.className='formmsg ok';m.textContent='Merci, votre demande est bien envoyée. Réponse sous 24h.';}else{m.className='formmsg err';m.textContent='Une erreur est survenue. Réessayez ou écrivez à j.salvitti@bedimo.com.';}}catch(err){m.className='formmsg err';m.textContent='Une erreur réseau est survenue. Réessayez ou écrivez à j.salvitti@bedimo.com.';}b.textContent=l;b.disabled=false;});})();
+</script>
+</body>
+</html>
